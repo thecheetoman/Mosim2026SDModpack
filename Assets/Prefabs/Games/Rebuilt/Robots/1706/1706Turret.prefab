@@ -9445,6 +9445,7 @@ MonoBehaviour:
   beltLength: 10
   maxSquish: 2
   coreFriction: 0
+  coreBounce: 0
   rpm: 800
   compressionStiffness: 5000
   compressionDamping: 0
@@ -9457,6 +9458,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   motor: 0
+  ignoreDefaultMaxRpm: 0
   models:
   - model: {fileID: 2821610478644617100}
     jointAxis: 2
@@ -9481,6 +9483,7 @@ MonoBehaviour:
   audioResponseExponent: 0.75
   negativeRangeAudio: 0
   atRangeTollerance: 0.154
+  trajectoryTracer: 0
   realRpm: 0
   TargetRpm: 0
 --- !u!114 &6294054954360741180
@@ -13214,6 +13217,7 @@ MonoBehaviour:
   beltLength: 10
   maxSquish: 1.2
   coreFriction: 0
+  coreBounce: 0
   rpm: 1600
   compressionStiffness: 7000
   compressionDamping: 0
@@ -13226,6 +13230,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   motor: 0
+  ignoreDefaultMaxRpm: 0
   models: []
   rollerSound: {fileID: 0}
   playbackSpeed: 1
@@ -13238,6 +13243,7 @@ MonoBehaviour:
   audioResponseExponent: 0.75
   negativeRangeAudio: 0
   atRangeTollerance: 0.02
+  trajectoryTracer: 0
   realRpm: 0
   TargetRpm: 0
 --- !u!1 &7356878403821405376
@@ -15735,6 +15741,7 @@ MonoBehaviour:
   beltLength: 10
   maxSquish: 1.2
   coreFriction: 0
+  coreBounce: 0
   rpm: 1600
   compressionStiffness: 7000
   compressionDamping: 0
@@ -15747,6 +15754,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   motor: 0
+  ignoreDefaultMaxRpm: 0
   models: []
   rollerSound: {fileID: 0}
   playbackSpeed: 1
@@ -15759,6 +15767,7 @@ MonoBehaviour:
   audioResponseExponent: 0.75
   negativeRangeAudio: 0
   atRangeTollerance: 0.02
+  trajectoryTracer: 0
   realRpm: 0
   TargetRpm: 0
 --- !u!1 &8596485119560135869

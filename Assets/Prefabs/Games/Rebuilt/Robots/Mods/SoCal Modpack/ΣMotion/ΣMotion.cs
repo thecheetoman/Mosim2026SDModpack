@@ -71,6 +71,7 @@ public class ΣMotion : RebuiltTurretRobot
 
     private float _targetIntakeAngle;
     private float _targetHoodAngle; // hood space (positive = opened)
+    private float _flywheelTargetRpm; // computed in the zone methods, applied only while shooting
     private bool _intakeDeployed;
     private bool _hopperLockedRetracted;
     private bool _hopperExtended;
@@ -198,15 +199,14 @@ public class ΣMotion : RebuiltTurretRobot
         }
     }
 
-    // Flywheel speed and hood angle are set here (not in Shooting) because Aligned() requires
-    // the flywheel at speed and the hood in position, and Shooting() is only called once
-    // Aligned() is true.
+    // The target flywheel speed and hood angle are computed here every frame.
+    // The flywheel itself only runs in Shooting() / IntakingAndShooting().
     protected override void AllianceZone()
     {
         turret.SetDefaultMap(GenericTurret.DefaultMap.Hub);
         flywheelInterpolation.SetDefaultMap(DefaultMap.Hub);
         hoodInterpolation.SetDefaultMap(DefaultMap.Hub);
-        flywheelRollers.SetRpm(flywheelInterpolation.Interpolate());
+        _flywheelTargetRpm = flywheelInterpolation.Interpolate();
         SetHoodTarget();
     }
 
@@ -215,7 +215,7 @@ public class ΣMotion : RebuiltTurretRobot
         turret.SetPassMapClosest();
         // If RebuiltInterpolation has a pass map, set it on both interpolations here;
         // otherwise they keep the last map.
-        flywheelRollers.SetRpm(flywheelInterpolation.Interpolate());
+        _flywheelTargetRpm = flywheelInterpolation.Interpolate();
         SetHoodTarget();
     }
 
@@ -253,27 +253,32 @@ public class ΣMotion : RebuiltTurretRobot
         shooterIndexerD.Stop();
     }
 
+    // Stop() lasts one frame, so it is called every frame in the non-shooting states.
     protected override void Intaking()
     {
         SetIndexerRpm(indexerIdleRpm);
+        flywheelRollers.Stop();
         StopShooterIndexer();
     }
 
     protected override void IntakingAndShooting()
     {
         SetIndexerRpm(indexerShootRpm);
-        StopShooterIndexer();
+        flywheelRollers.SetRpm(_flywheelTargetRpm);
+        RunShooterIndexer();
     }
 
     protected override void Shooting()
     {
         SetIndexerRpm(indexerShootRpm);
+        flywheelRollers.SetRpm(_flywheelTargetRpm);
         RunShooterIndexer();
     }
 
     protected override void Idling()
     {
         SetIndexerRpm(indexerIdleRpm);
+        flywheelRollers.Stop();
         StopShooterIndexer();
     }
 

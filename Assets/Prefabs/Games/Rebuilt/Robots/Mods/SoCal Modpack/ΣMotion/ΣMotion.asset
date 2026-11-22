@@ -16,7 +16,7 @@ MonoBehaviour:
   teamName: "\u03A3Motion"
   robotImage: {fileID: 21300000, guid: 70c9eaee1c852ee40bab017fe5bef9f6, type: 3}
   mainRobot:
-    displayName: "\u03A3Motion"
+    displayName: Kon Knueppel
     robotPrefab: {fileID: 1366992908901878388, guid: 954067d019b5cbb40b230278a98672de,
       type: 3}
     mainMenuPrefab: {fileID: 8063296130890638518, guid: a1b538e639cfdb8459adc1e8618525dd,

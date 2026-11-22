@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1409438a6844eea96767966da7413b, type: 3}
+  m_Name: Overclocked
+  m_EditorClassIdentifier: 
+  teamNumber: 2485
+  teamName: Overclocked
+  robotImage: {fileID: 0}
+  mainRobot:
+    displayName: Overclocked
+    robotPrefab: {fileID: 1366992908901878388, guid: 5c405c9aa724d0c41b30b82e1630f872,
+      type: 3}
+    mainMenuPrefab: {fileID: 8063296130890638518, guid: b31a9394a2dd7fd4abd37ae7734222d1,
+      type: 3}
+    spawnSelectionPrefab: {fileID: 4727483970537916974, guid: 25bdabf1e9cf6744981edc0262f305bc,
+      type: 3}
+    preloadGamePiece: {fileID: 0}
+    tutorialCards:
+    - {fileID: 1238517919143058973, guid: 8a774d7b18e33bf4f8998236713ff865, type: 3}
+    - {fileID: 1041269190401236503, guid: 850da887d0e6eb946b1d510a60962b79, type: 3}
+    - {fileID: 3978975480784649607, guid: c58222664a247814689d0bb528bd706c, type: 3}
+  alternateRobots: []

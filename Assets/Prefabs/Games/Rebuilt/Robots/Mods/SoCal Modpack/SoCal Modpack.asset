@@ -19,3 +19,4 @@ MonoBehaviour:
   thumbnail: {fileID: 0}
   robots:
   - {fileID: 11400000, guid: 55d6c52ed216c1d43832929ff921745c, type: 2}
+  - {fileID: 11400000, guid: 47285d96b4c28a3459476f8700a136ac, type: 2}

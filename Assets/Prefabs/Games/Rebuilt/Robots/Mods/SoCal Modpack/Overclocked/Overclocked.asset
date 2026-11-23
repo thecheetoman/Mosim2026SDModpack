@@ -16,7 +16,7 @@ MonoBehaviour:
   teamName: Overclocked
   robotImage: {fileID: 0}
   mainRobot:
-    displayName: Overclocked
+    displayName: Anubis
     robotPrefab: {fileID: 1366992908901878388, guid: 5c405c9aa724d0c41b30b82e1630f872,
       type: 3}
     mainMenuPrefab: {fileID: 8063296130890638518, guid: b31a9394a2dd7fd4abd37ae7734222d1,

@@ -47870,8 +47870,8 @@ MonoBehaviour:
   alliance: 0
   useCustomDefaultSpawn: 1
   defaultSpawn:
-    position: {x: 4.7, y: 3.4}
-    rotation: 0
+    position: {x: 4.642, y: -1.517}
+    rotation: 90
   bumpers:
     bumperMeshes:
     - {fileID: 7651391641859687361}

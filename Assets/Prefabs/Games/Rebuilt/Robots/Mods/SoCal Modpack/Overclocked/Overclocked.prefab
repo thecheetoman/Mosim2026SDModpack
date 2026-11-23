@@ -5920,7 +5920,7 @@ Transform:
   m_GameObject: {fileID: 793452273546165346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5555, y: 0.0106, z: 0.0048}
+  m_LocalPosition: {x: 0.57, y: 0.01, z: 0.0048}
   m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 0.99999976}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5938,20 +5938,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d77fda6c744f14aa8a835839b87a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1.5
+  radius: 2
   length: 24.375017
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 5
+  maxSquish: 10
   coreFriction: 1
   coreBounce: 0
   rpm: 800
   compressionStiffness: 100
   compressionDamping: 100
   scrubForces: 0
-  motorSlipResponse: 1
+  motorSlipResponse: 0.01
   frictionCoupledToNormal: 0
-  frictionCoefficient: 3
+  frictionCoefficient: 5
   oppositeReaction: 1
   ignoreLayers:
     serializedVersion: 2
@@ -10839,6 +10839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6529486126788009691}
+  - {fileID: 8324424990653366921}
   m_Father: {fileID: 462349726225647816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1281445138679796705
@@ -35774,6 +35775,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1406397902946749877}
+  - {fileID: 5919191199868684159}
   m_Father: {fileID: 462349726225647816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &64793077758454649
@@ -35861,6 +35863,60 @@ Transform:
   - {fileID: 6285342649891764011}
   m_Father: {fileID: 5837886692289074959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5320087774905729229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8324424990653366921}
+  - component: {fileID: 8287440638634504223}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8324424990653366921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320087774905729229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.47077826, y: -0.000000050291415, z: -0.000000074505806,
+    w: 0.8822516}
+  m_LocalPosition: {x: -0.003491, y: -0.003124, z: 0.002344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6024557432014111224}
+  m_LocalEulerAnglesHint: {x: -56.17, y: 0, z: 0}
+--- !u!65 &8287440638634504223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320087774905729229}
+  m_Material: {fileID: 13400000, guid: 7753f476d8594a0498685718bfc29b13, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00003, y: 0.0006420519, z: 0.0011645567}
+  m_Center: {x: 1.9875284e-12, y: -0.000056238663, z: 0.00016772174}
 --- !u!1 &5326066715548835888
 GameObject:
   m_ObjectHideFlags: 0
@@ -40510,6 +40566,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6002074598002847479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5919191199868684159}
+  - component: {fileID: 8626386369371206117}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5919191199868684159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002074598002847479}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.47077823, y: -0.000000050291412, z: -0.0000000745058, w: 0.88225156}
+  m_LocalPosition: {x: -0.003491, y: -0.003124, z: 0.002344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3499888459934946604}
+  m_LocalEulerAnglesHint: {x: -56.17, y: 0, z: 0}
+--- !u!65 &8626386369371206117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002074598002847479}
+  m_Material: {fileID: 13400000, guid: 7753f476d8594a0498685718bfc29b13, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00003, y: 0.0006420519, z: 0.0011645567}
+  m_Center: {x: 1.9875284e-12, y: -0.000056238663, z: 0.00016772174}
 --- !u!1 &6006430506766219911
 GameObject:
   m_ObjectHideFlags: 0
@@ -60465,12 +60574,15 @@ MonoBehaviour:
   useCustomDefaultSpawn: 1
   defaultSpawn:
     position: {x: 3.85, y: -3.4}
-    rotation: 0
+    rotation: 180
   bumpers:
-    bumperMeshes: []
+    bumperMeshes:
+    - {fileID: 3104197624771719073}
+    - {fileID: 6177851610690080292}
     materialIndex: 0
-    blueBumperMaterial: {fileID: 0}
-    redBumperMaterial: {fileID: 0}
+    blueBumperMaterial: {fileID: 2100000, guid: 593dd39015683cb438aeedbbde183e47,
+      type: 2}
+    redBumperMaterial: {fileID: 2100000, guid: 225eae9dfb3dc32428affb6750c92778, type: 2}
     Vanity:
       AllowVanity: 0
       VanityType: 0
@@ -60544,6 +60656,7 @@ MonoBehaviour:
   hoodRpmReduction: 1
   hoodAngleTolerance: 0.5
   idleHoodAngle: 78
+  feedReadyDebounce: 0.06
   hubFlywheelInterpolation:
     interpolationMap:
     - distance: 2.8

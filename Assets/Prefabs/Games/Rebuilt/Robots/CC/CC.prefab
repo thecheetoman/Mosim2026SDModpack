@@ -55112,10 +55112,6 @@ MonoBehaviour:
     m_ActionName: 'Robot/SwapCamera[/Keyboard/p]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 16a3d8d8-73d7-4123-8b29-a7800f53e576
-    m_ActionName: 'Robot/L4[/Keyboard/r]'
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 67c4581d-fb13-48c8-9afd-49adcedc64ad
     m_ActionName: 'Robot/Stow[/Keyboard/c]'
   - m_PersistentCalls:
@@ -55126,14 +55122,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: bee10e9a-92da-4a8e-b845-83402506e590
     m_ActionName: 'Robot/Intake[/Keyboard/shift,/XInputControllerWindows/leftTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68c29949-f616-4557-8d64-e8ba3614a005
-    m_ActionName: 'Robot/L3[/XInputControllerWindows/buttonWest,/Keyboard/v]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: aeb6b3ac-dfc4-44bb-8cd8-59b158b33268
-    m_ActionName: 'Robot/L2[/XInputControllerWindows/buttonEast,/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 75758fa5-e79e-4435-acda-4a0bf1b16117
@@ -55198,6 +55186,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2fee38ea-e1a8-4271-8ff8-e56aaf21ca1f
     m_ActionName: 'Robot/RobotSpecial3[/SwitchProControllerHID/buttonEast,/Keyboard/o]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d9669b06-7a73-47c3-a2ed-e4d586c0b5d7
+    m_ActionName: 'Robot/DpadR[/XInputControllerWindows/dpad/right,/Keyboard/x]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Robot 1
   m_DefaultActionMap: Robot

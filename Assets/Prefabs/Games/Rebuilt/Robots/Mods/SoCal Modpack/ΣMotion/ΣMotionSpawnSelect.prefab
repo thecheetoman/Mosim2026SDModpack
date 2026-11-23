@@ -5050,7 +5050,7 @@ GameObject:
   - component: {fileID: 8866870580923103434}
   m_Layer: 0
   m_Name: collider-box (3)
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17969,7 +17969,7 @@ GameObject:
   - component: {fileID: 6675876365789081755}
   m_Layer: 0
   m_Name: collider-box
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23262,7 +23262,7 @@ GameObject:
   - component: {fileID: 2119747074102138095}
   m_Layer: 0
   m_Name: collider-box (5)
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23807,7 +23807,7 @@ GameObject:
   - component: {fileID: 3876978775429555229}
   m_Layer: 0
   m_Name: collider-box (4)
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28052,7 +28052,7 @@ GameObject:
   - component: {fileID: 8064927662310972453}
   m_Layer: 0
   m_Name: collider-box (2)
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37318,7 +37318,7 @@ GameObject:
   - component: {fileID: 4796554862067495163}
   m_Layer: 0
   m_Name: collider-box (6)
-  m_TagString: Untagged
+  m_TagString: Bumpers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

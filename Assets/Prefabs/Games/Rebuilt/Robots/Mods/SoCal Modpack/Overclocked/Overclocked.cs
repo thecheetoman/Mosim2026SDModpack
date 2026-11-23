@@ -1,7 +1,6 @@
 using System;
 using Games.Rebuilt.Components;
 using Games.Rebuilt.Robots;
-using Mono.Cecil.Cil;
 using MoSimLib;
 using RobotFramework.Components;
 using RobotFramework.Controllers.PidSystems;
@@ -62,6 +61,8 @@ public class Overclocked : RebuiltRobotBase
     [SerializeField, Min(0.01f)] private float hoodRpmReduction = 1.5f;     // hood rollers run at flywheel RPM / this
     [SerializeField, Min(0f)] private float hoodAngleTolerance = 0.5f;
     [SerializeField] private float idleHoodAngle = 0f; // Hood angle when not shooting// degrees
+    // all readiness checks must hold this long before feeding starts
+    [SerializeField, Min(0f)] private float feedReadyDebounce = 0.06f;
 
     [Header("Shot Interpolation")]
     [SerializeField] private RebuiltInterpolation hubFlywheelInterpolation;
@@ -71,6 +72,8 @@ public class Overclocked : RebuiltRobotBase
 
     private float _targetHoodAngle;
     private bool _shooterReady;
+    private float _feedReadyTimer;
+    private bool _feedReady;
 
 
     // Runtime state: add target positions, toggles, and the auto-aim controller here.
@@ -96,6 +99,8 @@ public class Overclocked : RebuiltRobotBase
         passHoodInterpolation.Initialize(this);
         _targetHoodAngle = Mathf.Clamp(idleHoodAngle, hoodAngleLimits.x, hoodAngleLimits.y);
         _intakeDeployed = false;
+        _feedReady = false;
+        _feedReadyTimer = 0f;
         
         Scheduler.AddSubsystems(Intake, Hopper, Shooter, HandleAutoAim, Indexer);
         Scheduler.AddProtectedSystem(UpdateJoints);
@@ -112,7 +117,8 @@ public class Overclocked : RebuiltRobotBase
 
     private void Indexer()
     {
-        if (ReadyToShoot())
+        // feeds only once aimed, flywheel + hood rollers at speed, and hood at angle
+        if (ReadyToFeed())
         {
             indexerRollers.SetRpm(shootingIndexerRPM);
         }
@@ -196,11 +202,13 @@ public class Overclocked : RebuiltRobotBase
     {
         if (!WantsToShoot())
         {
-            shooterIndexers.SetRpm(-100);
+            shooterIndexers.SetRpm(-1000);
             shooterRollers.Stop();
             hoodRollers.Stop();
             _targetHoodAngle = Mathf.Clamp(idleHoodAngle, hoodAngleLimits.x, hoodAngleLimits.y);
             _shooterReady = false;
+            _feedReady = false;
+            _feedReadyTimer = 0f;
             return;
         }
 
@@ -224,11 +232,14 @@ public class Overclocked : RebuiltRobotBase
         float angle = Mathf.Clamp(hoodInterp.Interpolate(), hoodAngleLimits.x, hoodAngleLimits.y);
 
         shooterRollers.SetRpm(rpm);
-        shooterIndexers.SetRpm(shooterIndexerRPM);
         hoodRollers.SetRpm(rpm / hoodRpmReduction);
         _targetHoodAngle = angle;
 
         _shooterReady = shooterRollers.AtSpeed() && hoodRollers.AtSpeed() && HoodAtAngle();
+
+        // the shooter indexers only run once every readiness check has held for the debounce time
+        UpdateFeedReady();
+        shooterIndexers.SetRpm(_feedReady ? shooterIndexerRPM : 0f);
     }
 
     private bool HoodAtAngle()
@@ -269,9 +280,17 @@ public class Overclocked : RebuiltRobotBase
     {
         return WantsToShoot() && (ManualShoot || AimedToShoot());
     }
-    // Feed only when aimed, the flywheel and hood rollers are at speed, and the hood is at angle.
+
+    // Debounced: aimed (or ManualShoot), flywheel + hood rollers at speed, hood at angle.
+    private void UpdateFeedReady()
+    {
+        bool ready = WantsToShoot() && _shooterReady && (ManualShoot || AimedToShoot());
+        _feedReadyTimer = ready ? _feedReadyTimer + Time.fixedDeltaTime : 0f;
+        _feedReady = _feedReadyTimer >= feedReadyDebounce;
+    }
+
     private bool ReadyToFeed()
     {
-        return WantsToShoot() && (ManualShoot || AimedToShoot()) && _shooterReady;
+        return _feedReady;
     }
 }

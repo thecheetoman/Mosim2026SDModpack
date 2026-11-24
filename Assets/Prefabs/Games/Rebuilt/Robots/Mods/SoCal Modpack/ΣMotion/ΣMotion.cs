@@ -187,6 +187,7 @@ public class ΣMotion : RebuiltTurretRobot
     {
         float target = UnderTrench() ? hoodStowAngle : hoodInterpolation.Interpolate();
         _targetHoodAngle = Mathf.Clamp(target, hoodMinAngle, hoodMaxAngle);
+        Debug.Log($"hood: target={_targetHoodAngle} actual={hoodJoint.GetAngle()} trench={UnderTrench()} interp={hoodInterpolation.Interpolate()} zone={(InAllianceZone() ? "alliance" : "neutral")} f={Time.frameCount}");
     }
 
     protected override void HandleSwm()

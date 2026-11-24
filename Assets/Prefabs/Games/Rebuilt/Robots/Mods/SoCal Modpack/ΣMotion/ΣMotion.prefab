@@ -2315,13 +2315,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466690135234830146}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9261178, z: -0.37723467, w: 0}
+  m_LocalRotation: {x: 0.37723467, y: 0, z: 0, w: 0.9261178}
   m_LocalPosition: {x: -0.002, y: 0.4633, z: -0.0409}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7936900154698083117}
-  m_LocalEulerAnglesHint: {x: 44.325, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.325, y: 0, z: 0}
 --- !u!114 &6368286024327452135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6864,7 +6864,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156432064043368248}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -7141,6 +7141,7 @@ Transform:
   m_Children:
   - {fileID: 4182084694935628859}
   - {fileID: 5466300885421087787}
+  - {fileID: 5867605822274567051}
   m_Father: {fileID: 7515330575536488968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2591773494437006632
@@ -7163,6 +7164,12 @@ MonoBehaviour:
     Multiplier: 1
     flipped: 0
   - IntRoller: {fileID: 6368286024327452135}
+    GenRoller: {fileID: 0}
+    PvffController: {fileID: 0}
+    Flywheel: {fileID: 0}
+    Multiplier: 1
+    flipped: 1
+  - IntRoller: {fileID: 2517054310980145371}
     GenRoller: {fileID: 0}
     PvffController: {fileID: 0}
     Flywheel: {fileID: 0}
@@ -17362,6 +17369,89 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3101000254627424094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5867605822274567051}
+  - component: {fileID: 2517054310980145371}
+  m_Layer: 0
+  m_Name: Roller (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5867605822274567051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101000254627424094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.37723467, y: 0, z: 0, w: 0.9261178}
+  m_LocalPosition: {x: -0.002, y: 0.4187, z: 0.0747}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7936900154698083117}
+  m_LocalEulerAnglesHint: {x: 44.325, y: 0, z: 0}
+--- !u!114 &2517054310980145371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101000254627424094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d77fda6c744f14aa8a835839b87a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.5
+  length: 24.21001
+  useBeltMode: 0
+  beltLength: 10
+  maxSquish: 50
+  coreFriction: 1
+  coreBounce: 0
+  rpm: 800
+  compressionStiffness: 100
+  compressionDamping: 100
+  scrubForces: 0
+  motorSlipResponse: 0.01
+  frictionCoupledToNormal: 0
+  frictionCoefficient: 3
+  oppositeReaction: 1
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  motor: 0
+  ignoreDefaultMaxRpm: 0
+  models:
+  - model: {fileID: 2145658513802481691}
+    jointAxis: 2
+    reversed: 0
+    multiplier: 1
+  rollerSound: {fileID: 8300000, guid: 9378423fe1c50f0419b9380e03b4ef96, type: 3}
+  playbackSpeed: 1
+  pitchMultiplier: 0.0005
+  movementAudioPitchRange: {x: 0.95, y: 1.1}
+  volumeMultiplier: 0.00025
+  movementAudioVolumeRange: {x: 0.1, y: 0.25}
+  audioPitchSmoothSpeed: 8
+  audioVolumeSmoothSpeed: 8
+  audioResponseExponent: 0.75
+  negativeRangeAudio: 0
+  atRangeTollerance: 0.02
+  trajectoryTracer: 0
+  realRpm: 0
+  TargetRpm: 0
 --- !u!1 &3114567656138363328
 GameObject:
   m_ObjectHideFlags: 0
@@ -27679,6 +27769,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2181128797751351847}
+  - {fileID: 4235031907766980131}
   m_Father: {fileID: 9173990445298553538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5018537734932264712
@@ -28286,6 +28377,59 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2605189, y: 0.0031750517, z: 0.27781248}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5103490162248934884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4235031907766980131}
+  - component: {fileID: 7108818479989362316}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4235031907766980131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103490162248934884}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.18269502, y: -0, z: -0, w: 0.9831697}
+  m_LocalPosition: {x: 0, y: 0.1784, z: -0.3622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 458449473448157507}
+  m_LocalEulerAnglesHint: {x: -21.054, y: 0, z: 0}
+--- !u!65 &7108818479989362316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103490162248934884}
+  m_Material: {fileID: 13400000, guid: 91a97ecb2bc4d2f46b9d7b6d3f66552a, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6, y: 0.01, z: 0.12}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5123706620158464936
 GameObject:

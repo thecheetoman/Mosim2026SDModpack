@@ -5353,7 +5353,7 @@ MonoBehaviour:
   length: 25
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 3
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
@@ -22704,7 +22704,7 @@ MonoBehaviour:
   length: 24
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 3
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
@@ -26690,7 +26690,7 @@ MonoBehaviour:
   length: 25
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 3
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
@@ -35026,7 +35026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brakeModeMultiplyer: 1
   ignoreDisabledMode: 0
-  lockJointOnDisable: 0
+  lockJointOnDisable: 1
   movementAudioClip: {fileID: 0}
   audioErrorThreshold: 3
   audioErrorDeltaThreshold: 25
@@ -44249,7 +44249,7 @@ MonoBehaviour:
   length: 25
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 3
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
@@ -60665,6 +60665,8 @@ MonoBehaviour:
       value: 3300
     - distance: 4.5
       value: 4000
+    - distance: 5.3
+      value: 5300
     Distance: 0
     Output: 0
     transformOverride: {fileID: 0}

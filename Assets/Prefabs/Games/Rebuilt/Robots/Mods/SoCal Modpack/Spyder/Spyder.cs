@@ -146,7 +146,7 @@ public class Spyder : RebuiltRobotBase
         _agitating = _agitateTimer >= agitateDelay;
         _targetIntakeDist = _agitating ? intakeAgitateValue : intakeOutValue;
         // based on active state, run intake or high at low states
-        intakeRoller.SetRpm(IntakeAction ? intakeActiveRPM : intakeInactiveRPM);
+        intakeRoller.SetRpm(!IntakeAction ? intakeActiveRPM : intakeInactiveRPM);
     }
 
     private void Indexer()

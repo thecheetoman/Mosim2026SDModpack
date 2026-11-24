@@ -23,7 +23,8 @@ MonoBehaviour:
       type: 3}
     spawnSelectionPrefab: {fileID: 4727483970537916974, guid: 25bdabf1e9cf6744981edc0262f305bc,
       type: 3}
-    preloadGamePiece: {fileID: 0}
+    preloadGamePiece: {fileID: 2886892246794840118, guid: 96adc4350dc09d942b6bf56af73710ca,
+      type: 3}
     tutorialCards:
     - {fileID: 1238517919143058973, guid: 744b399e77529ec438fdc7a2145397c5, type: 3}
     - {fileID: 1041269190401236503, guid: da7d929a819082e4d90504bd46f47ccd, type: 3}

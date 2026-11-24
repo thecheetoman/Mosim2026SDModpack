@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1409438a6844eea96767966da7413b, type: 3}
+  m_Name: Optix
+  m_EditorClassIdentifier: 
+  teamNumber: 3749
+  teamName: OPTIX
+  robotImage: {fileID: 0}
+  mainRobot:
+    displayName: for sale
+    robotPrefab: {fileID: 1366992908901878388, guid: 1f4b9a54ae0b95343a5be61403087cce,
+      type: 3}
+    mainMenuPrefab: {fileID: 8063296130890638518, guid: ba08db5677cefb848849872d43732d82,
+      type: 3}
+    spawnSelectionPrefab: {fileID: 4727483970537916974, guid: db639981fa0959a4a96fac6aa6019812,
+      type: 3}
+    preloadGamePiece: {fileID: 0}
+    tutorialCards:
+    - {fileID: 1238517919143058973, guid: be1de48d95fa1044db8f6ea056385a1a, type: 3}
+    - {fileID: 1041269190401236503, guid: 6b4a6f47654a146438a4b0f7fefcf78c, type: 3}
+    - {fileID: 3978975480784649607, guid: c93193cccbf312f4c85e559cab195629, type: 3}
+  alternateRobots: []

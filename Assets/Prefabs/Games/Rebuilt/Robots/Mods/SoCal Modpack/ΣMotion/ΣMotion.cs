@@ -108,6 +108,16 @@ public class ΣMotion : RebuiltTurretRobot
         Scheduler.AddProtectedSystem(UpdateJoints);
         Scheduler.AddLateRecursive(UpdatePids);
     }
+    // fix for hood interpolation not working on first boot(in editor and in game)
+    protected override void LateInit()
+    {
+        base.LateInit();
+        // force interpolation maps to fix hood disfunctionality
+        flywheelInterpolation.SetDefaultMap(DefaultMap.Hub);
+        hoodInterpolation.SetDefaultMap(DefaultMap.Hub);
+        // apply changes via setHoodTarget
+        SetHoodTarget();
+    }
 
     private void Intake()
     {
@@ -119,7 +129,7 @@ public class ΣMotion : RebuiltTurretRobot
 
         float direction = RobotSpecial.IsPressed() ? -1f : 1f;
 
-        if (_intakeDeployed)
+        if (_intakeDeployed && IntakeAction)
         {
             intakeRollers.SetRpm(intakeRpm * direction);
         }
@@ -187,7 +197,6 @@ public class ΣMotion : RebuiltTurretRobot
     {
         float target = UnderTrench() ? hoodStowAngle : hoodInterpolation.Interpolate();
         _targetHoodAngle = Mathf.Clamp(target, hoodMinAngle, hoodMaxAngle);
-        Debug.Log($"hood: target={_targetHoodAngle} actual={hoodJoint.GetAngle()} trench={UnderTrench()} interp={hoodInterpolation.Interpolate()} zone={(InAllianceZone() ? "alliance" : "neutral")} f={Time.frameCount}");
     }
 
     protected override void HandleSwm()

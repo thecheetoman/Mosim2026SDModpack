@@ -47127,9 +47127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alliance: 0
-  useCustomDefaultSpawn: 0
+  useCustomDefaultSpawn: 1
   defaultSpawn:
-    position: {x: 0, y: 0}
+    position: {x: 4.675, y: 0}
     rotation: 0
   bumpers:
     bumperMeshes:

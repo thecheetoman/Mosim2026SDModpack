@@ -48127,7 +48127,7 @@ MonoBehaviour:
   useCustomDefaultSpawn: 1
   defaultSpawn:
     position: {x: 4.642, y: -1.517}
-    rotation: 90
+    rotation: -90
   bumpers:
     bumperMeshes:
     - {fileID: 7651391641859687361}
@@ -48210,7 +48210,7 @@ MonoBehaviour:
   indexerShootRpm: 2000
   indexerIdleRpm: 800
   indexerOuttakeRpm: -1600
-  shooterIndexerRpm: 1000
+  shooterIndexerRpm: 1400
   shooterIndexerReverseDelay: 0.2
   turretTolerance: 5
   requireAlignmentToShoot: 0

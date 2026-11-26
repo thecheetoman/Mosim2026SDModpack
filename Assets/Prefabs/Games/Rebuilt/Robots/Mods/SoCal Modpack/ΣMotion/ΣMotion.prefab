@@ -2339,7 +2339,7 @@ MonoBehaviour:
   useBeltMode: 0
   beltLength: 10
   maxSquish: 50
-  coreFriction: 1
+  coreFriction: 0.716
   coreBounce: 0
   rpm: 800
   compressionStiffness: 100

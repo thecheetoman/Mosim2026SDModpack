@@ -1999,11 +1999,11 @@ MonoBehaviour:
   length: 6
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 3
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
-  compressionStiffness: 100
+  compressionStiffness: 5000
   compressionDamping: 100
   scrubForces: 0
   motorSlipResponse: 1
@@ -8532,11 +8532,11 @@ MonoBehaviour:
   length: 5
   useBeltMode: 0
   beltLength: 10
-  maxSquish: 10
+  maxSquish: 1
   coreFriction: 1
   coreBounce: 0
   rpm: 800
-  compressionStiffness: 100
+  compressionStiffness: 5000
   compressionDamping: 100
   scrubForces: 0
   motorSlipResponse: 1

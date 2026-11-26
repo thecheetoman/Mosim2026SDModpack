@@ -5943,10 +5943,10 @@ MonoBehaviour:
   useBeltMode: 0
   beltLength: 10
   maxSquish: 10
-  coreFriction: 1
+  coreFriction: 0.523
   coreBounce: 0
   rpm: 800
-  compressionStiffness: 100
+  compressionStiffness: 2000
   compressionDamping: 100
   scrubForces: 0
   motorSlipResponse: 0.01
@@ -54203,11 +54203,11 @@ HingeJoint:
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
+    spring: 15
+    damper: 1
+    targetPosition: -55
   m_UseMotor: 0
   m_Motor:
     targetVelocity: 0
